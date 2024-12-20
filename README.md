@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Image to WebP Converter
 
-## Getting Started
+## Overview
+This is a React-based web application for converting JPG, JPEG, and PNG images to the WebP format. It supports multiple file uploads and provides a side-by-side comparison of the original and converted images, including file size and percentage savings.
 
-First, run the development server:
+## Features
+- **Supports Multiple Formats**: Converts JPG, JPEG, and PNG images to WebP.
+- **JPG to PNG Conversion**: Automatically converts JPG/JPEG files to PNG before converting to WebP.
+- **Batch Processing**: Allows multiple images to be uploaded and processed simultaneously.
+- **Side-by-Side Comparison**: Displays the original and converted images with file size and savings percentage.
+- **Download Option**: Enables users to download the converted WebP images.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Tech Stack
+- **React**: For building the user interface.
+- **Tailwind CSS**: For responsive and modern styling.
+- **FileReader API**: To read and process image files.
+- **Canvas API**: For rendering and converting images.
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/image-to-webp-converter.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd image-to-webp-converter
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
+5. Open the app in your browser at `http://localhost:3000`.
+
+## Usage
+1. Upload JPG, JPEG, or PNG files using the file input.
+2. The app will display the original image alongside the converted WebP image.
+3. View file sizes and savings percentage for each image.
+4. Click the "Download WebP" button to save the converted file to your device.
+
+## Folder Structure
+```
+src/
+├── components/
+│   ├── ui/
+│   │   ├── button.js
+│   │   ├── input.js
+│   │   ├── alert.js
+│   │   ├── badge.js
+│   │   ├── card.js
+├── App.js
+├── main.js
+public/
+├── index.html
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Key Files
+- `App.js`: Contains the core logic for the image conversion process.
+- `ui/`: Reusable UI components such as buttons, cards, and alerts.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Styling
+The application uses Tailwind CSS for modern, responsive styling. Adjustments can be made in the `tailwind.config.js` file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Future Improvements
+- Add support for additional image formats (e.g., GIF, BMP).
+- Optimize WebP compression settings for higher quality or smaller sizes.
+- Add a progress bar for large file uploads.
+- Allow folder drag-and-drop functionality.
 
-## Learn More
+## License
+This project is licensed under the MIT License. See the LICENSE file for details.
 
-To learn more about Next.js, take a look at the following resources:
+## Contributions
+Contributions are welcome! Feel free to fork the repository and submit a pull request.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Acknowledgments
+Special thanks to the developers of React and Tailwind CSS for providing the tools to build this application.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
